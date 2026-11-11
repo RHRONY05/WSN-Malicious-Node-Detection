@@ -1,0 +1,215 @@
+{
+  "raw_shape": [
+    374661,
+    19
+  ],
+  "raw_class_counts": {
+    "Normal": 340066,
+    "Grayhole": 14596,
+    "Blackhole": 10049,
+    "TDMA": 6638,
+    "Flooding": 3312
+  },
+  "missing_values": 0,
+  "exact_duplicates": 8873,
+  "duplicates_removed_after_id_drop": 23250,
+  "clean_shape": [
+    351411,
+    17
+  ],
+  "clean_class_counts": {
+    "Normal": 324062,
+    "Grayhole": 12060,
+    "TDMA": 6495,
+    "Blackhole": 5637,
+    "Flooding": 3157
+  },
+  "classes": [
+    "Blackhole",
+    "Flooding",
+    "Grayhole",
+    "Normal",
+    "TDMA"
+  ],
+  "n_features_total": 19,
+  "split": {
+    "train": 253015,
+    "val": 28113,
+    "test": 70283
+  },
+  "k_search": {
+    "4": 0.8427,
+    "6": 0.8351,
+    "8": 0.8681,
+    "10": 0.9491,
+    "12": 0.9546,
+    "14": 0.9566,
+    "19": 0.967
+  },
+  "selected_k": 19,
+  "selected_features": [
+    "ADV_S",
+    "Is_CH",
+    "Ctrl_Msgs_Sent",
+    "Energy_per_Packet",
+    "Expanded_Energy",
+    "SCH_S",
+    "DATA_S",
+    "Rank",
+    "JOIN_S",
+    "Data_Forward_Ratio",
+    "send_code",
+    "Data_Sent_To_BS",
+    "Dist_To_CH",
+    "ADV_R",
+    "SCH_R",
+    "dist_CH_To_BS",
+    "JOIN_R",
+    "DATA_R",
+    "Time"
+  ],
+  "train_before_resample": {
+    "Blackhole": 4058,
+    "Flooding": 2274,
+    "Grayhole": 8683,
+    "Normal": 233324,
+    "TDMA": 4676
+  },
+  "train_after_resample": {
+    "Blackhole": 20000,
+    "Flooding": 20000,
+    "Grayhole": 20000,
+    "Normal": 60000,
+    "TDMA": 20000
+  },
+  "best_params": {
+    "Random Forest": {
+      "n_estimators": 400,
+      "min_samples_split": 2,
+      "min_samples_leaf": 1,
+      "max_features": 0.5,
+      "max_depth": 40
+    },
+    "XGBoost": {
+      "subsample": 0.8,
+      "n_estimators": 700,
+      "min_child_weight": 1,
+      "max_depth": 6,
+      "learning_rate": 0.2,
+      "colsample_bytree": 0.7
+    },
+    "LightGBM": {
+      "subsample_freq": 1,
+      "subsample": 0.8,
+      "reg_lambda": 0,
+      "num_leaves": 127,
+      "n_estimators": 800,
+      "min_child_samples": 40,
+      "max_depth": -1,
+      "learning_rate": 0.1,
+      "colsample_bytree": 0.85
+    }
+  },
+  "sample_class_weights": {
+    "Blackhole": 7.583,
+    "Flooding": 10.129,
+    "Grayhole": 5.184,
+    "Normal": 1.0,
+    "TDMA": 7.064
+  },
+  "voting_weights": {
+    "RF (tuned+cw)": 0.3321,
+    "XGBoost (tuned+cw)": 0.3338,
+    "LightGBM (tuned+cw)": 0.334
+  },
+  "threshold_base_model": "LightGBM (tuned+cw)",
+  "class_weights": {
+    "Blackhole": 1.0,
+    "Flooding": 1.0,
+    "Grayhole": 0.8,
+    "Normal": 1.0,
+    "TDMA": 1.0
+  },
+  "best_baseline": "Random Forest",
+  "auc": {
+    "Blackhole": 0.99999,
+    "Flooding": 0.99991,
+    "Grayhole": 0.99997,
+    "Normal": 0.9964,
+    "TDMA": 0.98749
+  },
+  "shap_example_row": {
+    "ADV_S": 1.0,
+    "Is_CH": 1.0,
+    "Ctrl_Msgs_Sent": 1.0,
+    "Energy_per_Packet": 0.03703,
+    "Expanded_Energy": 0.03703,
+    "SCH_S": 0.0,
+    "DATA_S": 0.0,
+    "Rank": 0.0,
+    "JOIN_S": 0.0,
+    "Data_Forward_Ratio": 2.0,
+    "send_code": 0.0,
+    "Data_Sent_To_BS": 2.0,
+    "Dist_To_CH": 0.0,
+    "ADV_R": 26.0,
+    "SCH_R": 0.0,
+    "dist_CH_To_BS": 90.54003,
+    "JOIN_R": 0.0,
+    "DATA_R": 0.0,
+    "Time": 2403.0
+  },
+  "lime_blackhole": [
+    [
+      "ADV_S > 0.00",
+      0.02559227641611853
+    ],
+    [
+      "Is_CH > 0.00",
+      0.011194960747909266
+    ],
+    [
+      "Ctrl_Msgs_Sent <= 1.00",
+      -0.004728142849591716
+    ],
+    [
+      "DATA_R <= 0.00",
+      -0.004506872682437321
+    ],
+    [
+      "Time > 1353.00",
+      0.004380436810998863
+    ],
+    [
+      "Expanded_Energy > 0.20",
+      0.003622484713145542
+    ],
+    [
+      "Data_Forward_Ratio <= 0.00",
+      0.003448101696373508
+    ],
+    [
+      "Energy_per_Packet > 0.00",
+      0.003218597537505889
+    ]
+  ],
+  "final_model": "LightGBM (tuned+cw) + Threshold Opt.",
+  "final_metrics": {
+    "Accuracy": 0.99701,
+    "Precision (macro)": 0.98058,
+    "Recall (macro)": 0.97816,
+    "F1 (macro)": 0.9791,
+    "F1 (weighted)": 0.997,
+    "MCC": 0.97971
+  },
+  "best_baseline_metrics": {
+    "Accuracy": 0.99641,
+    "Precision (macro)": 0.97512,
+    "Recall (macro)": 0.97475,
+    "F1 (macro)": 0.97449,
+    "F1 (weighted)": 0.9964,
+    "MCC": 0.97564,
+    "Train time (s)": 6.72524
+  },
+  "runtime_sec": 804.3
+}

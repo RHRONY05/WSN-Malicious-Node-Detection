@@ -1,0 +1,62 @@
+{
+  "best_strategy": "Class weights (sqrt-inverse)",
+  "best_variant": "ensemble + threshold opt.",
+  "details": {
+    "No resampling": {
+      "class_weights": [
+        0.6,
+        3.0,
+        0.5,
+        0.8,
+        1.0
+      ],
+      "voting_weights": [
+        0.9738812781580094,
+        0.9770730580577436,
+        0.9761715645357892
+      ]
+    },
+    "Class weights (sqrt-inverse)": {
+      "class_weights": [
+        1.6,
+        1.2000000000000002,
+        0.5,
+        1.8,
+        1.0
+      ],
+      "voting_weights": [
+        0.9732432583031043,
+        0.9782176932465223,
+        0.9787653474246557
+      ]
+    },
+    "Moderate SMOTE (minorities to 15k)": {
+      "class_weights": [
+        0.5,
+        2.3,
+        1.2000000000000002,
+        2.1,
+        1.0
+      ],
+      "voting_weights": [
+        0.9730729167462092,
+        0.9740220888481407,
+        0.9765739834020785
+      ]
+    },
+    "Hybrid under-sampling + SMOTE": {
+      "class_weights": [
+        0.8,
+        0.5,
+        0.6,
+        2.7,
+        0.5
+      ],
+      "voting_weights": [
+        0.9636848805866796,
+        0.9661740075773935,
+        0.9654282655952778
+      ]
+    }
+  }
+}

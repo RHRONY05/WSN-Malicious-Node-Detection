@@ -1,0 +1,13 @@
+Model,Accuracy,Precision (macro),Recall (macro),F1 (macro),F1 (weighted),MCC,Stage
+Gaussian NB,0.9583,0.7177,0.8692,0.7539,0.9625,0.7621,Baseline
+Logistic Regression,0.9882,0.9377,0.892,0.911,0.988,0.919,Baseline
+Decision Tree,0.9941,0.9587,0.9654,0.962,0.9941,0.9599,Baseline
+Random Forest,0.9964,0.9751,0.9748,0.9745,0.9964,0.9756,Baseline
+Extra Trees,0.9963,0.9736,0.9743,0.9736,0.9963,0.9748,Baseline
+XGBoost,0.9957,0.9721,0.963,0.9673,0.9957,0.971,Baseline
+LightGBM,0.9961,0.9743,0.9724,0.9732,0.996,0.9733,Baseline
+RF (tuned+cw),0.9963,0.9721,0.9778,0.9745,0.9963,0.9749,Improved
+XGBoost (tuned+cw),0.9967,0.9773,0.978,0.9774,0.9967,0.9778,Improved
+LightGBM (tuned+cw),0.997,0.9804,0.9778,0.9788,0.997,0.9795,Improved
+Soft Voting Ensemble,0.9969,0.9791,0.9781,0.9783,0.9969,0.9788,Improved
+LightGBM (tuned+cw) + Threshold Opt.,0.997,0.9806,0.9782,0.9791,0.997,0.9797,Improved

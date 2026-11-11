@@ -1,0 +1,5 @@
+Setting,Model,Accuracy,Macro F1,Top-3 features,ID features rank
+IDs + duplicates kept,LightGBM,0.9923,0.9557,"Expaned Energy, id, who CH","2, 3"
+IDs + duplicates kept,Random Forest,0.9973,0.9819,"ADV_S, Expaned Energy, Is_CH","13, 14"
+IDs + duplicates removed (ours),LightGBM,0.996,0.9727,"Time, Expaned Energy, ADV_R",-
+IDs + duplicates removed (ours),Random Forest,0.9965,0.975,"ADV_S, Is_CH, Expaned Energy",-
