@@ -24,7 +24,7 @@ TEAM = [("Al Rubayet", "2204002"), ("Md. Rony Hossain", "2204005"),
 DEPT = "Department of Computer Science & Engineering"
 UNIV = "Chittagong University of Engineering & Technology"
 LOGO = Path(__file__).resolve().parent / "assets" / "cuet_logo.png"
-CODE_LINK = "Add your GitHub / Kaggle / Colab link here"
+CODE_LINK = "https://github.com/RHRONY05/WSN-Malicious-Node-Detection"
 # --------------------------------------------------------------------------
 
 ROOT = Path(__file__).resolve().parent
